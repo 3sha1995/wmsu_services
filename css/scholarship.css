@@ -1,0 +1,561 @@
+
+  .scholarship-section {
+  background: linear-gradient(135deg, #B32134, #7C0A02);
+  color: white;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.scholarship-container {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  gap: 50px;
+}
+
+.scholarship-text-container {
+  flex: 1;
+}
+
+.scholarship-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.scholarship-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: white;
+  margin-top: 10px;
+}
+
+.scholarship-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scholarship-cta {
+  display: inline-block;
+  background: white;
+  color: #B32134;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.scholarship-cta:hover {
+  background: #ffff99;
+  transform: translateY(-3px);
+}
+
+.scholarship-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.scholarship-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scholarship-section.show .scholarship-description,
+.scholarship-section.show .scholarship-image img {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .scholarship-title {
+      font-size: 2.2rem;
+  }
+
+  .scholarship-content {
+      max-width: 90%;
+      padding: 25px;
+  }
+
+  .scholarship-text {
+      font-size: 1.1rem;
+  }
+}
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/* Eligibility Section */
+.eligibility-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../imgs/alumni.jpg') center/cover no-repeat;
+}
+
+.eligibility-overlay {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 0, 0, 0.7); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+
+.eligibility-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 1s forwards;
+}
+
+.eligibility-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: white;
+  margin: 5px auto 0;
+}
+
+.eligibility-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards 0.5s;
+}
+
+.requirement-box {
+  background-color: white;
+  color: #800000;
+  padding: 20px;
+  width: 45%;
+  min-width: 300px;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.requirement-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.requirement-box h3 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.requirement-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.requirement-box li {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+.eligibility-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.eligibility-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.requirement-box li:nth-child(1) { animation-delay: 0.2s; }
+.requirement-box li:nth-child(2) { animation-delay: 0.4s; }
+.requirement-box li:nth-child(3) { animation-delay: 0.6s; }
+.requirement-box li:nth-child(4) { animation-delay: 0.8s; }
+
+.requirement-box li::before {
+  content: "›";
+  font-size: 16px;
+  margin-right: 10px;
+  color: #800000;
+  font-weight: bold;
+}
+
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .eligibility-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .requirement-box {
+    width: 90%;
+  }
+}
+
+    @media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+  
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+  
+    .hero-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+  
+    .divider {
+        width: 80px;
+        height: 2px;
+    }
+  
+    .nav-item {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+  }
+
+
+  /*----------------------------------------------------------------------------------------------------------------*/
+/* SCHOLARSHIP FINANCIAL SECTION */
+.scholarship-financial-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #FFFF;
+}
+
+.scholarship-financial-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #800000;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+.scholarship-financial-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color:#800000;
+  margin: 5px auto 0;
+}
+.scholarship-financial-subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #800000;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  
+}
+
+.scholarship-financial-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.scholarship-financial-card {
+  background-color: #B32134;
+  color: white;
+  padding: 20px;
+  width: 280px;
+  min-height: 160px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scholarship-financial-card:hover {
+  transform: scale(1.05);
+}
+
+.scholarship-financial-card i {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #FFFF;
+}
+
+.scholarship-financial-card h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.scholarship-financial-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.scholarship-financial-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scholarship-financial-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .scholarship-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/* Contact Section */
+.contact-section {
+  background-color: #800000;   color: white;
+  padding: 50px 20px;
+  position: relative;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.contact-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background-color: white;
+  margin: 5px auto 0;
+}
+
+.contact-title span {
+  font-weight: normal;
+}
+
+.officers-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.officer-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 250px;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  
+    opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.officer-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.officer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 10px 15px rgba(255, 255, 255, 0.4);
+}
+
+.profile-circle {
+  width: 80px;
+  height: 80px;
+  background-color: lightgray;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.officer-card h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.position {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.email, .phone, .location {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .officers-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/* Downloadable Section */
+.scholar-title-downloadable {
+    color: #800000;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+.scholar-title-downloadable::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #800000;
+    margin: 5px auto 15px;
+}
+
+.download-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.download-card {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.download-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.download-icon {
+    font-size: 30px;
+    color: #800000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.scholarship-btn-downloadable {
+    background-color: #800000;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.scholarship-btn-downloadable:hover {
+    background-color: #a00000;
+    transform: scale(1.05);
+}

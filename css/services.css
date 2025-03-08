@@ -1,0 +1,96 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(165, 42, 42, 0.8), rgba(165, 42, 42, 0.8)), url('students-background.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+/* Navigation tabs */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding: 15px 0;
+  border-bottom: 1px solid white;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab.active {
+  font-weight: bolder;
+}
+
+.tab-divider {
+  width: 1px;
+  height: 30px;
+  background-color: white;
+}
+
+/* Services content */
+.services-container {
+  display: flex;
+  padding: 20px 15px 30px;
+}
+
+.services-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.service-item {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 14px;
+  transition: opacity 0.3s;
+}
+
+.service-item:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services-container {
+      flex-direction: column;
+  }
+  
+  .services-column {
+      margin-bottom: 20px;
+  }
+  
+  .tabs {
+      flex-wrap: wrap;
+  }
+  
+  .tab-divider {
+      display: none;
+  }
+}

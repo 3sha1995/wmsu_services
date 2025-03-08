@@ -1,0 +1,596 @@
+ /*-------------------------------------------------------------------------------------------------------------------- */
+/* Services Section */
+.services-section {
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #b32134, #7C0A02);     text-align: center;
+    position: relative;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-description {
+    font-size: 18px;
+    color: white;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    background-color: white;     color: #333;
+    padding: 30px 25px;
+    width: 270px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(179, 33, 52, 0.1);
+    transition: transform 0.5s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.service-card:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #b32134;
+    transition: color 0.3s;
+}
+
+.service-card:hover .service-icon {
+    color: #7C0A02;
+}
+
+.service-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-link {
+    color: #b32134;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.service-link:hover {
+    color: #7C0A02;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 900px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+ /*-------------------------------------------------------------------------------------------------------------------- */
+/* Mental Wellness Section */
+.mental-wellness-section {
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #7C0A02, #B32134);     text-align: center;
+    position: relative;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: white;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.resource-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    background: white;
+    border: none;
+    color: #7C0A02;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #B32134;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tab-btn:hover {
+    background: #7C0A02;
+    color: white;
+}
+
+.resource-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.resource-card {
+    background: white;     width: 320px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.image-placeholder {
+    background: #F0F0F0;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resource-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.resource-tag {
+    display: inline-block;
+    background: #B32134;
+    color: white;
+    padding: 5px 12px;
+    font-size: 14px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.resource-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.resource-description {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.resource-btn {
+    background: #B32134;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.resource-btn:hover {
+    background: #7C0A02;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 900px) {
+    .resource-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resource-card {
+        width: 90%;
+    }
+}
+
+
+
+
+ /*-------------------------------------------------------------------------------------------------------------------- */
+/* Guidance Section */
+.guidance-section {
+    background: white;
+    color: #333;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.guidance-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.guidance-container {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+    gap: 50px;
+    transition: transform 0.3s ease-out;
+}
+
+.guidance-text-container {
+    flex: 1;
+}
+
+.guidance-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #7C0A02;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.guidance-title::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 4px;
+    background-color: #800000;
+    margin: 5px auto 0;
+    margin-left: 0%;
+}
+.guidance-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.guidance-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.guidance-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.guidance-section.show .guidance-description,
+.guidance-section.show .guidance-image img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.guidance-container:hover {
+    transform: scale(1.02);
+}
+
+.guidance-title:hover {
+    color: #B32134;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .guidance-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .guidance-title {
+        font-size: 2.2rem;
+    }
+
+    .guidance-description {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .guidance-image img {
+        max-width: 90%;
+    }
+}
+
+
+
+
+
+
+ /*-------------------------------------------------------------------------------------------------------------------- */
+/* Mentorship Section */
+.guidance-contact-section {
+    background-color: #800000;  
+    color: white;
+    padding: 50px 20px;
+    position: relative;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.mentorship-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.mentorship-title::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto 0;
+}
+
+.mentorship-title span {
+    font-weight: normal;
+}
+
+.mentors-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.mentor-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 250px;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.mentor-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mentor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 10px 15px rgba(255, 255, 255, 0.4);
+}
+
+.mentor-profile-circle {
+    width: 80px;
+    height: 80px;
+    background-color: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+.mentor-card h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.mentor-position {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.mentor-email, .mentor-phone, .mentor-location {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .mentors-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+ /*-------------------------------------------------------------------------------------------------------------------- */
+/* Contact Section */
+.guidance-contact {
+    display: flex;     justify-content: center;     align-items: center;     flex-direction: column;     height: 100vh; }
+
+.guidance-contact-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.guidance-contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.guidance-contact-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #800000;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.guidance-contact-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #800000;
+    margin: 5px auto 0;
+   
+}
+
+.guidance-info {
+    text-align: left;
+}
+
+.guidance-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: opacity 0.5s ease;
+}
+
+.guidance-icon {
+    font-size: 20px;
+    color: #800000;
+    margin-right: 15px;
+}
+
+
+.guidance-item a, .guidance-item p {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+.guidance-item a:hover {
+    text-decoration: underline;
+}
+
+.guidance-item:hover {
+    background: #F8F8F8;
+    transform: translateX(3px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

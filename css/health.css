@@ -1,0 +1,605 @@
+ /*-------------------------------------------------------------------------------------------------------------------- */
+/* Health Services Section */
+.health-services {
+  background: #fff;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.health-services:hover {
+  background: rgba(243, 243, 243, 0.5);
+}
+
+.container-health {
+  max-width: 1100px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #B32134;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.section-title.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  text-align: left;
+}
+
+.text-content {
+  flex: 1;
+  min-width: 320px;
+  max-width: 550px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  padding: 20px;
+  background: #fff;
+  border-left: 5px solid #B32134;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.health-image {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.scroll-reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .text-content {
+      border-left: none;
+      border-top: 5px solid #B32134;
+      text-align: left;
+  }
+
+  .scroll-reveal-left {
+      transform: translateY(50px);
+  }
+
+  .scroll-reveal-right {
+      transform: translateY(50px);
+  }
+}
+
+
+
+
+ /*-------------------------------------------------------------------------------------------------------------------- */
+/*  Services Section */
+.services-section {
+  background-color: #800000;
+  padding: 60px 0;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.services-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: relative;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.services-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: white;
+  margin: 8px auto;
+}
+
+.services-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+.services-grid {
+  display: flex;
+  justify-content: space-between;   align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;   max-width: 1000px;   margin: auto; }
+
+.service-card {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 320px;   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  position: relative;
+}
+
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.icon {
+  font-size: 35px;
+  color: #800000;
+  margin-bottom: 12px;
+  transition: color 0.4s ease-in-out;
+}
+
+.service-card:hover .icon {
+  color: #B32134;
+}
+
+.service-title {
+  color: #800000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+@keyframes fadeSlideUp {
+  from {
+      opacity: 0;
+      transform: translateY(40px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
+
+
+
+ /*-------------------------------------------------------------------------------------------------------------------- */
+/*  Operating Hours Section */
+.operating-hours-section {
+  position: relative;
+  background: url('../imgs/alumni.jpg') center/cover no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.operating-hours-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);   z-index: 1;
+}
+
+.operating-hours-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.toggle-box {
+  background-color: white;
+  color: #800000;
+  padding: 25px;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.toggle-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.schedule-box {
+  background: linear-gradient(135deg, #B32134, #7C0A02);
+  color: white;
+  padding: 40px;
+  max-width: 750px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.schedule-section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #800000;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.schedule-section-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #800000;
+  margin: 8px auto;
+  border-radius: 2px;
+}
+
+.schedule-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.schedule-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  color: #800000;
+  border-radius: 10px;
+}
+
+.schedule-table th {
+  background: #800000;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.schedule-table td {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule-table tbody tr:hover {
+  background: rgba(179, 33, 52, 0.1);
+  transition: background 0.3s ease-in-out;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #B32134;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #B32134;
+  margin: 8px auto;
+  border-radius: 2px;
+}
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+      from {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  
+
+
+ /*-------------------------------------------------------------------------------------------------------------------- */
+/* Contact Section */
+.health-contact-section {
+  background-color: #800000;   color: white;
+  padding: 50px 20px;
+  position: relative;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.health-contact-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.health-contact-title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background-color: white;
+  margin: 5px auto 0;
+}
+
+.health-contact-title span {
+  font-weight: normal;
+}
+
+.health-officers-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.health-officer-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 250px;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  
+    opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.health-officer-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.health-officer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 10px 15px rgba(255, 255, 255, 0.4);
+}
+
+.profile-circle {
+  width: 80px;
+  height: 80px;
+  background-color: lightgray;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.health-officer-card h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.position {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.email, .phone, .location {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .health-officers-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+
+
+
+ /*-------------------------------------------------------------------------------------------------------------------- */
+/* Health Information Section */
+
+.health-info-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.health-info-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #800000;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.health-info-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #800000;
+    margin: 5px auto 0;
+}
+
+.health-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.health-contact-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.health-contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: opacity 0.5s ease;
+}
+
+.contact-item i {
+    font-size: 20px;
+    color: #800000;
+    margin-right: 15px;
+}
+
+.health-map-card {
+    width: 80%;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+}
+
+.health-map-card:hover {
+    transform: scale(1.02);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.health-map-placeholder {
+    background-color: #e0e7ef;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.health-map-placeholder:hover {
+    background: #d1dbe9;
+}
+
+.map-icon {
+    font-size: 40px;
+    color: #800000;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

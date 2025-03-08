@@ -1,0 +1,609 @@
+
+.library-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: white;
+}
+
+.library-container {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  gap: 30px;
+  justify-content: flex-end;   text-align: right; }
+
+.library-image {
+  flex-shrink: 0;
+}
+
+.library-image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.library-content {
+  flex: 1;
+}
+
+.library-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #800000;
+  margin-bottom: 15px;
+}
+
+.library-text {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.library-section.show .library-image img,
+.library-section.show .library-text {
+  opacity: 1;
+  transform: translateY(0);
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .library-container {
+      flex-direction: column-reverse;
+      text-align: center;
+  }
+
+  .library-image img {
+      width: 150px;
+      height: 150px;
+  }
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------- */
+/* Library Services  */
+
+.library-services {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  background-color: #fff;
+  padding: 60px 20px;
+  flex-wrap: wrap; }
+
+  .library-facilities-title {
+    margin-top: 150px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #800000;
+    margin-bottom: 15px;
+    margin-right: 20px;
+  }
+.library-card {
+  width: 340px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.library-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.library-thumbnail {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.library-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.library-card-content {
+  padding: 20px;
+}
+
+.library-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #DC3535;
+}
+
+.library-card-content p {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.library-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .library-services {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .library-card {
+      width: 90%;
+  }
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------- */
+/* Library Services Section */
+.library-services-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.library-services-title {
+    margin-top: 30px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #800000;
+    margin-bottom: 15px;
+}
+
+.library-services-description {
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.library-services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 320px;
+    border: 1px solid rgba(128, 0, 0, 0.2);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(128, 0, 0, 0.3);
+}
+
+.service-card i {
+    font-size: 32px;
+    color: #800000;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 19px;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.service-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .library-services-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------- */
+/* Library Contact */
+.library-contact-section {
+  background-color: #800000;   
+  color: white;
+  padding: 50px 20px;
+  position: relative;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.library-contact-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.library-contact-title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background-color: white;
+  margin: 5px auto 0;
+}
+
+.library-contact-title span {
+  font-weight: normal;
+}
+
+.library-officers-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.library-officer-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 250px;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  
+    opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.library-officer-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.library-officer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 10px 15px rgba(255, 255, 255, 0.4);
+}
+
+.profile-circle {
+  width: 80px;
+  height: 80px;
+  background-color: lightgray;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.library-officer-card h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.position {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.email, .phone, .location {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+}
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------- */
+/* Library Info*/
+
+.library-info-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.library-info-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #800000;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.library-info-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #800000;
+  margin: 5px auto 0;
+}
+
+.library-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.library-contact-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.library-contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  transition: opacity 0.5s ease;
+}
+
+.contact-item i {
+  font-size: 20px;
+  color: #800000;
+  margin-right: 15px;
+}
+
+.library-map-card {
+  width: 80%;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+}
+
+.library-map-card:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.library-map-placeholder {
+  background-color: #e0e7ef;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.library-map-placeholder:hover {
+  background: #d1dbe9;
+}
+
+.map-icon {
+  font-size: 40px;
+  color: #800000;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------- */
+/* Library Operating Hours*/
+.library-operating-hours-section {
+  margin-top: 50px;
+  position: relative;
+  background: url('../imgs/alumni.jpg') center/cover no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.library-operating-hours-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6); 
+  z-index: 1;
+}
+
+.library-operating-hours-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #800000;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #800000;
+  margin: 8px auto;
+  border-radius: 2px;
+}
+
+.toggle-box {
+  background-color: white;
+  color: #800000;
+  padding: 25px;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.toggle-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.schedule-box {
+  background: linear-gradient(135deg, #B32134, #7C0A02);
+  color: white;
+  padding: 40px;
+  max-width: 750px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.schedule-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.schedule-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  color: #800000;
+  border-radius: 10px;
+}
+
+.schedule-table th {
+  background: #800000;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.schedule-table td {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule-table tbody tr:hover {
+  background: rgba(179, 33, 52, 0.1);
+  transition: background 0.3s ease-in-out;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
