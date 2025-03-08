@@ -23,8 +23,7 @@
      <section class="about-section">
         <div class="about-container">
             <div class="about-image">
-                <!-- Placeholder Image (Replace with actual image) -->
-                <img src="../imgs/alumni.jpg" alt="Career Success">
+                                <img src="../imgs/alumni.jpg" alt="Career Success">
             </div>
             <div class="about-content">
         
@@ -295,8 +294,8 @@
 
     
     <section class="testimonials-section hidden">
-        <div class="overlay"></div> <!-- Transparent overlay -->
-        <div class="testimonials-container">
+        <div class="overlay"></div>      
+           <div class="testimonials-container">
             <h3 class="section-title">SUCCESS STORIES</h3>
             <h2>Student and Alumni Achievements</h2>
             <p class="section-subtitle">Hear from those who have successfully launched their careers with our support.</p>

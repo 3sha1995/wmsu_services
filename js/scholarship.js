@@ -10,20 +10,20 @@ document.addEventListener("DOMContentLoaded", function () {
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    section.classList.add("animate"); // Add animation class
+                    section.classList.add("animate"); 
                 }
             });
         },
         {
-            root: null, // Uses viewport
+            root: null, 
             rootMargin: "0px",
-            threshold: 0.5, // Trigger when 50% of the section is visible
+            threshold: 0.5, 
         }
     );
 
     observer.observe(section);
 
-    // Remove the class when scrolled past, so it can re-trigger next time
+
    
 window.addEventListener("scroll", function() {
     const section = document.querySelector(".scholarship-section");
@@ -46,14 +46,14 @@ window.addEventListener("scroll", function() {
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    section.classList.add("show"); // Add animation class
+                    section.classList.add("show"); 
                 }
             });
         },
         {
             root: null,
             rootMargin: "0px",
-            threshold: 0.5, // Animation triggers when 50% is visible
+            threshold: 0.5, 
         }
     );
 
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     window.addEventListener("scroll", fadeInCards);
-    fadeInCards(); // Run on page load
+    fadeInCards();
 });
 
 window.addEventListener("scroll", function() {

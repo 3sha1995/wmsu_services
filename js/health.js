@@ -6,9 +6,7 @@ function showSchedule() {
 document.addEventListener("DOMContentLoaded", function () {
     const elementsLeft = document.querySelectorAll(".scroll-reveal-left");
     const elementsRight = document.querySelectorAll(".scroll-reveal-right");
-    const title = document.querySelector(".section-title"); // Select title
-
-    const observerOptions = { 
+    const title = document.querySelector(".section-title");     const observerOptions = { 
         root: null,  
         rootMargin: "0px",
         threshold: 0.2  
@@ -56,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         },
-        { threshold: 0.2 } // Triggers when 20% of the element is visible
+        { threshold: 0.2 } 
     );
 
     serviceCards.forEach((card) => observer.observe(card));
@@ -72,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         },
-        { threshold: 0.3 } // Trigger animation when 30% visible
+        { threshold: 0.3 } 
     );
 
     sections.forEach((section) => observer.observe(section));

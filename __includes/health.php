@@ -13,14 +13,12 @@
 </head>
 <body>
 <section class="hero">
-    <div class="hero-overlay"></div> <!-- Stylish Gradient Overlay -->
-    <div class="hero-content">
+    <div class="hero-overlay"></div>     <div class="hero-content">
         <h1 class="hero-title">Empowering Minds, Shaping Futures</h1>
         <p class="hero-subtitle">Explore the services and opportunities we offer to help you excel in your academic and personal journey.</p>
         <a href="#services" class="hero-btn">Explore Services</a>
     </div>
-    <div class="wave-divider"></div> <!-- Adds a unique curved effect -->
-</section>
+    <div class="wave-divider"></div> </section>
 
 
     <section class="health-services">
@@ -68,13 +66,11 @@
     <section class="operating-hours-section">
     <div class="container">
         <h2 class="schedule-section-title">OPERATING HOURS</h2>
-        <!-- Toggle Box (Initially Visible) -->
-        <div class="toggle-box" onclick="showSchedule()">
+                <div class="toggle-box" onclick="showSchedule()">
         Click to View Schedule 📅
         </div>
 
-        <!-- Schedule Box (Initially Hidden) -->
-        <div class="schedule-box" id="scheduleBox">
+                <div class="schedule-box" id="scheduleBox">
             <h3 class="schedule-title">SCHEDULE</h3>
             <div class="schedule-wrapper">
                 <table class="schedule-table">
@@ -141,8 +137,7 @@
     <h2 class="health-info-title">Location & Contact</h2>
 
     <div class="health-info-container">
-        <!-- Contact Details -->
-        <div class="health-contact-card">
+                <div class="health-contact-card">
             <div class="contact-item">
                 <i class="fas fa-map-marker-alt"></i>
                 <span><strong>Location:</strong> Normal Road, Baliwasan, Zamboanga City, Philippines</span>
@@ -164,8 +159,7 @@
             </div>
         </div>
 
-        <!-- Map Section -->
-        <div class="health-map-card">
+                <div class="health-map-card">
             <div class="health-map-placeholder">
                 <i class="fas fa-map-marker-alt map-icon"></i>
                 <p>Click to view on Google Maps</p>

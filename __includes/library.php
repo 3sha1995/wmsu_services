@@ -108,13 +108,11 @@
      <div class="container">
          <h2 class="section-title">Operating Hours</h2>
 
-    <!-- Clickable Toggle Box -->
-    <div class="toggle-box" onclick="showSchedule()">
+        <div class="toggle-box" onclick="showSchedule()">
         Click to View Schedule 📅
     </div>
 
-    <!-- Schedule Box (Initially Hidden) -->
-    <div id="scheduleBox" class="schedule-box">
+        <div id="scheduleBox" class="schedule-box">
         <h3 class="schedule-title">Library Schedule</h3>
         <div class="schedule-wrapper">
             <table class="schedule-table">
@@ -181,8 +179,7 @@
     <h2 class="library-info-title">Location & Contact</h2>
 
     <div class="library-info-container">
-        <!-- Contact Details -->
-        <div class="library-contact-card">
+                <div class="library-contact-card">
             <div class="contact-item">
                 <i class="fas fa-map-marker-alt"></i>
                 <span><strong>Location:</strong> WMSU Main Campus, Library Building</span>
@@ -204,8 +201,7 @@
             </div>
         </div>
 
-        <!-- Map Section -->
-        <div class="library-map-card">
+                <div class="library-map-card">
             <div class="library-map-placeholder">
                 <i class="fas fa-map-marker-alt map-icon"></i>
                 <p>Click to view on Google Maps</p>

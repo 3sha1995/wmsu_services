@@ -42,12 +42,10 @@ function showSchedule() {
     document.getElementById("scheduleBox").style.display = "block"; 
     document.getElementById("scheduleBox").classList.add("fade-in-up"); 
 }
-// Function to detect when elements are in view
+
 function fadeInOnScroll() {
     const cards = document.querySelectorAll(".library-officer-card");
-    const triggerBottom = window.innerHeight * 0.85; // Adjust threshold
-
-    cards.forEach(card => {
+    const triggerBottom = window.innerHeight * 0.85;     cards.forEach(card => {
         const cardTop = card.getBoundingClientRect().top;
 
         if (cardTop < triggerBottom) {
@@ -56,6 +54,6 @@ function fadeInOnScroll() {
     });
 }
 
-// Run function on scroll
+
 window.addEventListener("scroll", fadeInOnScroll);
-fadeInOnScroll(); // Run on page load
+fadeInOnScroll(); 

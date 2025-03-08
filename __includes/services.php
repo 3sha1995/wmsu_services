@@ -52,8 +52,7 @@
         </section>
 
         <section class="services-container">
-            <!-- Students Column -->
-            <div class="services-column">
+                        <div class="services-column">
                 <a href="#" class="service-item">Facilities</a>
                 <a href="#" class="service-item">Virtual Services</a>
                 <a href="#" class="service-item">Organizations</a>
@@ -61,15 +60,13 @@
                 <a href="#" class="service-item">Insert More</a>
             </div>
 
-            <!-- Faculty Column -->
-            <div class="services-column">
+                        <div class="services-column">
                 <a href="#" class="service-item">Facilities</a>
                 <a href="#" class="service-item">Associations</a>
                 <a href="#" class="service-item">Portal</a>
             </div>
 
-            <!-- Alumni Column -->
-            <div class="services-column">
+                        <div class="services-column">
                 <a href="#" class="service-item">WMSU Alumni Federation</a>
                 <a href="#" class="service-item">Graduate Tracer</a>
                 <a href="#" class="service-item">Donate/ Give</a>
