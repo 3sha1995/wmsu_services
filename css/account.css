@@ -82,6 +82,8 @@ p {
     text-align: left;
     border: 1px solid #ddd;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 .security-tips h2 {
